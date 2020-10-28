@@ -12,13 +12,6 @@ To run tests, run `python -m unittest` in your console. You will see whether or 
 
 As is, the tests will pass. If you want to see what a failing test looks like, try to intentionally break the function which is being tested. You should see specifics printed to the console.
 
-Try it out
-----------
-
-Create some new functionality for this application. Try writing implementation and testing for a flat-rate discount.
-
-If you really want to do it right, start by writing the tests first. This is the basis for "test-driven development", a practice which is generally smiled upon. Google it yourself for details.
-
 Recommended reading
 -------------------
 
@@ -26,3 +19,4 @@ Recommended reading
 - https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters
 - https://realpython.com/python-testing/
 - https://docs.python.org/3/library/unittest.html
+- https://spin.atomicobject.com/2012/12/06/writing-tests-is-not-tdd/
