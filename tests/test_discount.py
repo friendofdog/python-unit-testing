@@ -1,5 +1,5 @@
 import unittest
-from discount import apply_percentage_discount, apply_flat_discount
+from discount.app import apply_percentage_discount, apply_flat_discount
 
 
 class TestDiscounts(unittest.TestCase):
