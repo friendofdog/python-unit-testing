@@ -6,8 +6,8 @@ def apply_flat_discount(c, d):
 
 
 if __name__ == "__main__":
-    cost = 1000
-    discount = 15
+    cost = int(input("Enter cost: "))
+    discount = int(input("Enter discount: "))
     percentate_discounted = apply_percentage_discount(cost, discount)
     flat_discounted = apply_flat_discount(cost, discount)
 
