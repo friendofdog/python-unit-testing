@@ -1,5 +1,8 @@
 import unittest
-from discount.app import apply_percentage_discount, apply_flat_discount
+from discount.app import (
+    apply_percentage_discount,
+    apply_flat_discount,
+    validate_discount)
 
 
 class TestDiscounts(unittest.TestCase):
@@ -17,3 +20,15 @@ class TestDiscounts(unittest.TestCase):
         for cost, discount, expected in test_cases:
             discounted_price = apply_flat_discount(cost, discount)
             self.assertEqual(expected, discounted_price)
+
+
+class TestDiscountValidation(unittest.TestCase):
+
+    def test_validate_discount_returns_None_if_prices_positive(self):
+        response = validate_discount(100, 10)
+        self.assertEqual(response, None)
+
+    def test_validate_discount_raises_ValueError_if_price_negative(self):
+        with self.assertRaises(ValueError) as err:
+            validate_discount(0, 100)
+        self.assertIsInstance(err.exception, ValueError)
